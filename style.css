@@ -1,3 +1,87 @@
+/* ---------- Color palette & variables ---------- */
+:root {
+    --bg: #f5f0e6;          /* warm beige page background */
+    --surface: #fbf8f1;     /* lighter cream for cards */
+    --text: #2b2f36;        /* soft charcoal for body text */
+    --muted: #5c6270;       /* secondary text */
+    --navy: #1f2a44;        /* headings, header */
+    --olive: #55632b;       /* links and accents */
+    --olive-dark: #3f4a20;  /* hover state */
+    --border: #ddd5c2;      /* subtle lines */
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: lightblue;
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 1.9rem;
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--olive);
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.25rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--olive);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--olive-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+}
+
+/* ---------- Page layout ---------- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 3rem 0;
 }
