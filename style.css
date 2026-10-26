@@ -86,110 +86,6 @@ section {
     padding: 3rem 0;
 }
 
-/* ---------- Header & navigation ---------- */
-#site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--navy);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-#site-header h1 {
-    margin: 0;
-    font-size: 1.4rem;
-    color: var(--bg);
-}
-
-#main-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem 1.25rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 0.95rem;
-}
-
-#main-nav a {
-    color: var(--bg);
-    text-decoration: none;
-}
-
-#main-nav a:hover {
-    color: #c9d58a;
-    text-decoration: underline;
-}
-
-/* keeps section titles from hiding under the sticky header */
-section {
-    scroll-margin-top: 5rem;
-}
-
-/* ---------- Hero section ---------- */
-#home {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    column-gap: 2.5rem;
-    align-content: center;
-    padding: 4rem 0;
-}
-
-#profile-photo {
-    grid-column: 1;
-    grid-row: 1 / span 4;
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--surface);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-}
-
-#home h2 {
-    display: block;
-    margin: 0 0 0.25rem;
-    padding: 0;
-    border-bottom: none;
-    font-size: 2.4rem;
-}
-
-#headline {
-    margin-bottom: 1rem;
-    color: var(--olive);
-    font-weight: 600;
-}
-
-#social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin: 0.5rem 0 0;
-    padding: 0;
-    list-style: none;
-}
-
-#social-links a {
-    display: inline-block;
-    padding: 0.4rem 1.1rem;
-    border: 2px solid var(--olive);
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-#social-links a:hover {
-    background-color: var(--olive);
-    color: var(--bg);
-}
-
 /* ---------- Project card ---------- */
 .project-card {
     background-color: var(--surface);
@@ -356,52 +252,232 @@ figcaption {
     color: #c8c4b8;
 }
 
+/* ---------- Sidebar header (desktop) ---------- */
+:root {
+    --sidebar-width: 280px;
+}
+
+body {
+    padding-left: var(--sidebar-width);
+}
+
+#site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.25rem;
+    background-color: var(--navy);
+    text-align: center;
+}
+
+#header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--surface);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+#site-header h1 {
+    margin: 1rem 0;
+    font-size: 1.45rem;
+    color: var(--bg);
+}
+
+#menu-toggle {
+    display: none;
+    padding: 0.35rem 0.7rem;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--bg);
+    background: transparent;
+    border: 1.5px solid rgba(245, 240, 230, 0.5);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#header-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* social link pills */
+#social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    list-style: none;
+}
+
+#social-links a {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border: 2px solid #c9d58a;
+    border-radius: 999px;
+    color: #c9d58a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+#social-links a:hover {
+    background-color: #c9d58a;
+    color: var(--navy);
+}
+
+/* vertical nav */
+#main-nav {
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(245, 240, 230, 0.2);
+}
+
+#main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-nav a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    color: var(--bg);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.9rem;
+}
+
+#main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+#main-nav a.active {
+    background-color: rgba(201, 213, 138, 0.15);
+    color: #c9d58a;
+    font-weight: 700;
+}
+
+/* ---------- Hero ---------- */
+#home {
+    padding: 4rem 0 3rem;
+}
+
+#home h2 {
+    display: block;
+    margin: 0 0 0.25rem;
+    padding: 0;
+    border-bottom: none;
+    font-size: 2.6rem;
+}
+
+#headline {
+    margin-bottom: 1rem;
+    color: var(--olive);
+    font-weight: 600;
+}
+
 /* ---------- Responsive: tablets and phones ---------- */
-@media (max-width: 768px) {
-    /* header: stack name above nav, and stop it from sticking
-       (a wrapped nav would cover too much of a small screen) */
-    #site-header {
-        position: static;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+@media (max-width: 900px) {
+    body {
+        padding-left: 0;
     }
 
-    #main-nav ul {
-        justify-content: center;
+    /* sidebar becomes a compact sticky top bar */
+    #site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+        align-items: stretch;
+        padding: 0.6rem 1.25rem;
+        text-align: left;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #header-top {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    #profile-photo {
+        width: 44px;
+        height: 44px;
+        border-width: 2px;
+        flex-shrink: 0;
+    }
+
+    #site-header h1 {
+        flex: 1;
+        margin: 0;
+        font-size: 1.15rem;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    /* menu is hidden until the button adds the "open" class */
+    #header-menu {
+        display: none;
+        padding-top: 0.75rem;
+    }
+
+    #header-menu.open {
+        display: flex;
+    }
+
+    #social-links {
+        order: 2;
+        margin: 1rem 0 0.5rem;
+    }
+
+    #main-nav {
+        padding-top: 0;
+        border-top: none;
     }
 
     section {
-        scroll-margin-top: 1rem;
         padding: 2.25rem 0;
+        scroll-margin-top: 5rem;
     }
 
     main {
         padding: 0 1.25rem;
     }
 
-    /* hero: one centered column instead of photo + text side by side */
     #home {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-        padding: 2.5rem 0;
-    }
-
-    #profile-photo {
-        grid-column: auto;
-        grid-row: auto;
-        width: 180px;
-        height: 180px;
-        margin-bottom: 1.25rem;
+        padding: 2rem 0;
     }
 
     #home h2 {
         font-size: 2rem;
-    }
-
-    #social-links {
-        justify-content: center;
     }
 }
 
@@ -419,7 +495,6 @@ figcaption {
         padding: 1.1rem;
     }
 
-    /* plots: one per row so they stay readable */
     .figure-grid {
         grid-template-columns: 1fr;
     }

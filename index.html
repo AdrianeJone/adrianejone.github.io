@@ -5,40 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adriane Jone Abunda | MEng AI</title>
-    <meta name="description" content="Personal website of Adriane Jone Abunda. Showcasing my projects, experience, and skills.">
+    <meta name="description"
+        content="Personal website of Adriane Jone Abunda. Showcasing my projects, experience, and skills.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header id="site-header">
-        <h1>Adriane Jone Abunda</h1>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main id="main-content">
-        <section id="home">
-            <img src="images/profile.jpg" alt="A photo of me in Sky Garden with Taal Volcano in the background"
-                id="profile-photo">
-            <h2>Hi, I'm Adriane.</h2>
-            <p id="headline">Licensed Chemical Engineer | MEng in Artificial Intelligence UP Diliman</p>
-            <p>I am a licensed chemical engineer currently taking a Master of Engineering in Artificial Intelligence at
-                the University of the Philippines Diliman.</p>
+        <div id="header-top">
+            <img src="images/profile.jpg" alt="Portrait of Adriane Jone" id="profile-photo">
+            <h1>Adriane Jone Abunda</h1>
+            <button id="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="header-menu">&#9776;</button>
+        </div>
+        <div id="header-menu">
             <ul id="social-links">
                 <li><a href="https://github.com/AdrianeJone" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/adriane-jone-abunda/" target="_blank"
                         rel="noopener noreferrer">LinkedIn</a></li>
                 <li><a href="mailto:adrianejoneabunda@gmail.com">Email</a></li>
             </ul>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="home">
+            <h2>Hi, I'm Adriane.</h2>
+            <p id="headline">Licensed Chemical Engineer | MEng in Artificial Intelligence UP Diliman</p>
+            <p>I am a licensed chemical engineer currently taking a Master of Engineering in Artificial Intelligence at
+                the University of the Philippines Diliman.</p>
         </section>
         <section id="about">
             <h2>About</h2>
@@ -174,6 +180,7 @@
         </ul>
         <p>&copy; 2026 Adriane Jone. All rights reserved.</p>
     </footer>
+<script src="script.js"></script>
 </body>
 
 </html>
