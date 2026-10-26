@@ -503,3 +503,16 @@ body {
         padding-left: 1rem;
     }
 }
+
+/* ---------- Link icons ---------- */
+#social-links a,
+#footer-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+#social-links i,
+#footer-links i {
+    font-size: 1.05em;
+}
