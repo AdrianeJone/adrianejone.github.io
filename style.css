@@ -355,3 +355,76 @@ figcaption {
     font-size: 0.9rem;
     color: #c8c4b8;
 }
+
+/* ---------- Responsive: tablets and phones ---------- */
+@media (max-width: 768px) {
+    /* header: stack name above nav, and stop it from sticking
+       (a wrapped nav would cover too much of a small screen) */
+    #site-header {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #main-nav ul {
+        justify-content: center;
+    }
+
+    section {
+        scroll-margin-top: 1rem;
+        padding: 2.25rem 0;
+    }
+
+    main {
+        padding: 0 1.25rem;
+    }
+
+    /* hero: one centered column instead of photo + text side by side */
+    #home {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 2.5rem 0;
+    }
+
+    #profile-photo {
+        grid-column: auto;
+        grid-row: auto;
+        width: 180px;
+        height: 180px;
+        margin-bottom: 1.25rem;
+    }
+
+    #home h2 {
+        font-size: 2rem;
+    }
+
+    #social-links {
+        justify-content: center;
+    }
+}
+
+/* ---------- Responsive: small phones ---------- */
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .project-card {
+        padding: 1.1rem;
+    }
+
+    /* plots: one per row so they stay readable */
+    .figure-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .entry {
+        padding-left: 1rem;
+    }
+}
