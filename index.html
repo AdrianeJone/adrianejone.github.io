@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adriane Jone Abunda | MEng AI</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header id="site-header">
         <h1>Adriane Jone Abunda</h1>
@@ -14,27 +16,38 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
         <section id="home">
-            <img src="images/profile.jpg" alt="A photo of me in Sky Garden with Taal Volcano in the background" id="profile-photo">
+            <img src="images/profile.jpg" alt="A photo of me in Sky Garden with Taal Volcano in the background"
+                id="profile-photo">
             <h2>Hi, I'm Adriane Jone</h2>
             <p id="headline">Licensed Chemical Engineer | MEng in Artificial Intelligence Student at UP Diliman</p>
-            <p>I am a licensed chemical engineer currently taking a Master of Engineering in Artificial Intelligence at the University of the Philippines Diliman.</p>
+            <p>I am a licensed chemical engineer currently taking a Master of Engineering in Artificial Intelligence at
+                the University of the Philippines Diliman.</p>
             <ul id="social-links">
                 <li><a href="https://github.com/AdrianeJone" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/adriane-jone-abunda/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/adriane-jone-abunda/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
                 <li><a href="mailto:adrianejoneabunda@gmail.com">Email</a></li>
             </ul>
         </section>
         <section id="about">
-        <h2>About</h2>
-            <p>I started out in chemical engineering, graduating cum laude from Mindanao State University - Iligan Institute of Technology in 2023 and becoming a licensed chemical engineer in 2024. My thesis on polymer synthesis optimization was awarded College Best Thesis in Sustainability.</p>
-            <p>After graduating, I worked as a cadet engineer at Coco Corporation, where I monitored biodiesel production through a Distributed Control System. Working with real-time plant data got me interested in what could be done with it, which led me to machine learning.</p>
-            <p>I am now taking a Master of Engineering in Artificial Intelligence at the University of the Philippines Diliman. My work so far focuses on classical machine learning, feature engineering, and building models that are lightweight and interpretable.</p>
+            <h2>About</h2>
+            <p>I started out in chemical engineering, graduating cum laude from Mindanao State University - Iligan
+                Institute of Technology in 2023 and becoming a licensed chemical engineer in 2024. My thesis on polymer
+                synthesis optimization was awarded College Best Thesis in Sustainability.</p>
+            <p>After graduating, I worked as a cadet engineer at Coco Corporation, where I monitored biodiesel
+                production through a Distributed Control System. Working with real-time plant data got me interested in
+                what could be done with it, which led me to machine learning.</p>
+            <p>I am now taking a Master of Engineering in Artificial Intelligence at the University of the Philippines
+                Diliman. My work so far focuses on classical machine learning, feature engineering, and building models
+                that are lightweight and interpretable.</p>
         </section>
         <section id="projects">
             <h2>Projects</h2>
@@ -42,30 +55,87 @@
                 <figure class="project-figure">
                     <div class="figure-grid">
                         <figure>
-                            <img src="images/tsne_raw.png" alt="t-SNE plot of the raw 371-dimensional feature space, showing heavily overlapping species clusters">
+                            <img src="images/tsne_raw.png"
+                                alt="t-SNE plot of the raw 371-dimensional feature space, showing heavily overlapping species clusters">
                             <figcaption>t-SNE (Raw)</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/umap_raw.png" alt="UMAP plot of the raw 371-dimensional feature space, showing heavily overlapping species clusters">
+                            <img src="images/umap_raw.png"
+                                alt="UMAP plot of the raw 371-dimensional feature space, showing heavily overlapping species clusters">
                             <figcaption>UMAP (Raw)</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/tsne_topn.png" alt="t-SNE plot after selecting the top 200 features, showing more distinct species clusters">
+                            <img src="images/tsne_topn.png"
+                                alt="t-SNE plot after selecting the top 200 features, showing more distinct species clusters">
                             <figcaption>t-SNE (Top-N)</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/umap_topn.png" alt="UMAP plot after selecting the top 200 features, showing more distinct species clusters">
+                            <img src="images/umap_topn.png"
+                                alt="UMAP plot after selecting the top 200 features, showing more distinct species clusters">
                             <figcaption>UMAP (Top-N)</figcaption>
                         </figure>
                     </div>
-                    <figcaption>t-SNE and UMAP embedding spaces before (raw) and after Top-N feature selection.</figcaption>
+                    <figcaption>t-SNE and UMAP embedding spaces before (raw) and after Top-N feature selection.
+                    </figcaption>
                 </figure>
                 <h3>Philippine Medicinal Plant Leaf Classification</h3>
                 <p class="project-tech">Python | OpenCV | scikit-learn | UMAP</p>
-                <p>A classical machine learning pipeline that classifies 4,922 leaf images across 40 Philippine medicinal plant species. I extracted a 371-feature vector per image (color, texture, shape, and vein descriptors), selected the top 200 features using ANOVA F-scores, and tuned an RBF SVM with grid search.</p>
-                <p><strong>Result:</strong> 98.06% test accuracy, beating the published VGG19 CNN benchmark of 92.67% and landing within 0.33 points of a VGG19 + SVM baseline, with a much lighter model.</p>
+                <p>A classical machine learning pipeline that classifies 4,922 leaf images across 40 Philippine
+                    medicinal plant species. I extracted a 371-feature vector per image (color, texture, shape, and vein
+                    descriptors), selected the top 200 features using ANOVA F-scores, and tuned an RBF SVM with grid
+                    search.</p>
+                <p><strong>Result:</strong> 98.06% test accuracy, beating the published VGG19 CNN benchmark of 92.67%
+                    and landing within 0.33 points of a VGG19 + SVM baseline, with a much lighter model.</p>
                 <ul class="project-links">
-                    <li><a href="https://github.com/AdrianeJone/Philippine-Medical-Plant-Leaf-Classification" target="_blank" rel="noopener noreferrer">View on GitHub</a></li>
+                    <li><a href="https://github.com/AdrianeJone/Philippine-Medical-Plant-Leaf-Classification"
+                            target="_blank" rel="noopener noreferrer">View on GitHub</a></li>
+                </ul>
+            </article>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <article class="entry">
+                <h3>Master of Engineering in Artificial Intelligence</h3>
+                <p class="entry-meta">University of the Philippines Diliman, Quezon City, Philippines | 2026 - Present
+                </p>
+                <ul>
+                    <li>Coursework: AI algorithms, search and optimization, classical machine learning</li>
+                </ul>
+            </article>
+            <article class="entry">
+                <h3>B.S. Chemical Engineering</h3>
+                <p class="entry-meta">Mindanao State University - Iligan Institute of Technology, Iligan City,
+                    Philippines | 2019 - 2023</p>
+                <ul>
+                    <li>Graduated Cum Laude</li>
+                    <li>Thesis: Polymer synthesis optimization; awarded College Best Thesis in Sustainability</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <article class="entry">
+                <h3>Mathematics Content Writer (Part-time)</h3>
+                <p class="entry-meta">Mathspace, Remote | Jun 2025 - Oct 2026</p>
+                <ul>
+                    <li>Write high school mathematics content for an interactive learning platform, producing print and
+                        digital textbooks aligned to educational standards.</li>
+                    <li>Author content in XML-structured formats using JSX-based tools, working with structured data and
+                        markup in a production environment.</li>
+                </ul>
+            </article>
+            <article class="entry">
+                <h3>Cadet Engineer (Full-time)</h3>
+                <p class="entry-meta">Coco Corporation, Jasaan, Misamis Oriental | Sep 2024 - Jul 2025</p>
+                <ul>
+                    <li>Operated and monitored biodiesel production through a Distributed Control System (DCS), tracking
+                        real-time deviations across multiple unit operations and coordinating with field operators to
+                        hold process targets.</li>
+                    <li>Built and maintained a centralized file system for equipment specifications, technical drawings,
+                        and historical plant data, improving traceability across engineering teams.</li>
+                    <li>Completed cadet training in plant operations, maintenance, and analytical laboratory work; ran
+                        safety checks and start-up procedures under strict quality controls.</li>
                 </ul>
             </article>
         </section>
@@ -75,4 +145,5 @@
         <p>&copy; 2026 Adriane Jone Abunda. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
