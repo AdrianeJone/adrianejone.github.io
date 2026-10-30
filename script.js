@@ -44,3 +44,43 @@ window.addEventListener("scroll", () => {
         setActive(sections[sections.length - 1].id);
     }
 });
+
+/* ---- figure carousels ---- */
+document.querySelectorAll(".carousel").forEach((carousel) => {
+    const slides = carousel.querySelectorAll(".carousel-slide");
+    const prevBtn = carousel.querySelector(".carousel-btn.prev");
+    const nextBtn = carousel.querySelector(".carousel-btn.next");
+    const count = carousel.querySelector(".carousel-count");
+    let index = 0;
+
+    function show(i) {
+        index = (i + slides.length) % slides.length;
+        slides.forEach((slide, n) => {
+            slide.classList.toggle("active", n === index);
+        });
+        count.textContent = (index + 1) + " / " + slides.length;
+    }
+
+    prevBtn.addEventListener("click", () => show(index - 1));
+    nextBtn.addEventListener("click", () => show(index + 1));
+
+    // arrow keys when the carousel is focused
+    carousel.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") show(index - 1);
+        if (e.key === "ArrowRight") show(index + 1);
+    });
+
+    // swipe on touch screens
+    let startX = null;
+    carousel.addEventListener("touchstart", (e) => {
+        startX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    carousel.addEventListener("touchend", (e) => {
+        if (startX === null) return;
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 50) show(dx < 0 ? index + 1 : index - 1);
+        startX = null;
+    });
+
+    show(0);
+});

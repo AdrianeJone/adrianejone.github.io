@@ -516,3 +516,65 @@ body {
 #footer-links i {
     font-size: 1.05em;
 }
+
+/* ---------- Carousel ---------- */
+.carousel {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.carousel-viewport {
+    padding: 0.75rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.carousel-slide {
+    display: none;
+    margin: 0;
+    text-align: center;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.carousel-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--olive);
+    background: transparent;
+    border: 2px solid var(--olive);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    background-color: var(--olive);
+    color: var(--bg);
+}
+
+.carousel-count {
+    min-width: 3.5rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
