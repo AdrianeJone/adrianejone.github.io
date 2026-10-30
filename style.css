@@ -596,3 +596,9 @@ body {
     color: var(--muted);
     font-size: 0.95rem;
 }
+
+/* ---------- Leaf carousel tweaks ---------- */
+.carousel .figure-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}

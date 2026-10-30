@@ -67,34 +67,55 @@
             <h2>Projects</h2>
             <article class="project-card">
                 <figure class="project-figure">
-                    <div class="figure-grid">
-                        <figure>
-                            <img src="images/tsne_raw.png"
-                                alt="t-SNE plot of the raw 371-dimensional feature space, showing heavily overlapping species clusters"
-                                loading="lazy">
-                            <figcaption>t-SNE (Raw)</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/umap_raw.png"
-                                alt="UMAP plot of the raw 371-dimensional feature space, showing heavily overlapping species clusters"
-                                loading="lazy">
-                            <figcaption>UMAP (Raw)</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/tsne_topn.png"
-                                alt="t-SNE plot after selecting the top 200 features, showing more distinct species clusters"
-                                loading="lazy">
-                            <figcaption>t-SNE (Top-N)</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/umap_topn.png"
-                                alt="UMAP plot after selecting the top 200 features, showing more distinct species clusters"
-                                loading="lazy">
-                            <figcaption>UMAP (Top-N)</figcaption>
-                        </figure>
+                    <div class="carousel" tabindex="0" role="group" aria-roledescription="carousel"
+                        aria-label="Leaf classification figures">
+                        <div class="carousel-viewport">
+                            <figure class="carousel-slide active">
+                                <div class="figure-grid">
+                                    <figure>
+                                        <a href="images/tsne_raw.png" target="_blank" rel="noopener noreferrer">
+                                            <img src="images/tsne_raw.png"
+                                                alt="t-SNE plot of the raw 371-dimensional feature space, showing heavily overlapping species clusters">
+                                        </a>
+                                        <figcaption>Raw features</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <a href="images/tsne_topn.png" target="_blank" rel="noopener noreferrer">
+                                            <img src="images/tsne_topn.png"
+                                                alt="t-SNE plot after selecting the top 200 features, showing more distinct species clusters">
+                                        </a>
+                                        <figcaption>Top-N features</figcaption>
+                                    </figure>
+                                </div>
+                                <figcaption>t-SNE embedding before and after feature selection</figcaption>
+                            </figure>
+                            <figure class="carousel-slide">
+                                <div class="figure-grid">
+                                    <figure>
+                                        <a href="images/umap_raw.png" target="_blank" rel="noopener noreferrer">
+                                            <img src="images/umap_raw.png"
+                                                alt="UMAP plot of the raw 371-dimensional feature space, showing heavily overlapping species clusters">
+                                        </a>
+                                        <figcaption>Raw features</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <a href="images/umap_topn.png" target="_blank" rel="noopener noreferrer">
+                                            <img src="images/umap_topn.png"
+                                                alt="UMAP plot after selecting the top 200 features, showing more distinct species clusters">
+                                        </a>
+                                        <figcaption>Top-N features</figcaption>
+                                    </figure>
+                                </div>
+                                <figcaption>UMAP embedding before and after feature selection</figcaption>
+                            </figure>
+                        </div>
+                        <div class="carousel-controls">
+                            <button type="button" class="carousel-btn prev"
+                                aria-label="Previous figure">&#10094;</button>
+                            <span class="carousel-count" aria-live="polite">1 / 2</span>
+                            <button type="button" class="carousel-btn next" aria-label="Next figure">&#10095;</button>
+                        </div>
                     </div>
-                    <figcaption>t-SNE and UMAP embedding spaces before (raw) and after Top-N feature selection.
-                    </figcaption>
                 </figure>
                 <h3>Philippine Medicinal Plant Leaf Classification</h3>
                 <p class="project-tech">Python | OpenCV | scikit-learn | UMAP</p>
